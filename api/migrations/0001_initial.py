@@ -16,7 +16,6 @@ class Migration(migrations.Migration):
             name='Account',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('trello_token', models.CharField(max_length=127)),
                 ('user', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
             ],
         ),

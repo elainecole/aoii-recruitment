@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseServerError, HttpResponseRedirect, HttpResponseBadRequest
 from django.contrib.auth import authenticate, logout, login
-
+from api.models import Account
 
 def hk_login(request):
     username = request.POST.get('username', '')
@@ -34,6 +34,8 @@ def hk_register(request):
     try:
         User.objects.create_user(username, email, password)
         user = authenticate(username=username, password=password)
+        account = Account(user=user, email=email)
+        account.save()
     except Exception as e:
         print str(e)
         return HttpResponseServerError(reason=str(e))

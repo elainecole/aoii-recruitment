@@ -1,6 +1,7 @@
 <!doctype html>
 
 <head>
+    <meta name="google-site-verification" content="Al9yz1RTZp_rV-t6wH_orjm5o0o_LN0dFvTeDfk1VCU" />
     {% load staticfiles %}
     {% include "base/links.html" %}
     {% include "base/less_headers/hello_less.html" %}
@@ -10,14 +11,21 @@
     {% include "partials/hello/hello_base.html" %}
 </script>
 
+<script id="user-template" type="text/template">
+    {% include "partials/hello/user_base.html" %}
+</script>
+
 <body>
     <div id="hello">
 
     </div>
 </body>
 
+<script src="https://api.trello.com/1/client.js?key=8375d26f1323687c9c60a19ba6860aac"></script>
 <script type="text/javascript" src="{% static "js/hello.js" %}"></script>
 <script type="text/javascript">
+    var user = {{user|safe}};
+
     var helloView = new hk.HelloView();
 </script>
 

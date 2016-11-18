@@ -1,50 +1,163 @@
-@white: #fff;
-@black: #000;
-@dark-white: #eee;
-@barely-not-white: #f5f5f5;
-@light-gray: #aaa;
-@lightish-gray: #999;
-@gray: #666;
-@dark-gray: #333;
-@deep-gray: #181818;
+// @purple: #501CB5;
+// @light-purple: #B1B2F4;
+// @dark-purple: #0E0038;
+// @blue: #74edd6;
+// @dark-blue: #1acbab;
+// @dark-yellow: #deb942;
+// @yellow: #F7CE4A;
+// @light-yellow: #FCEBB7;
+//
+@red: #c41c1c;
+@orangey: #f87060;
+// @white: #fff;
+// @black: #000;
+// @dark-white: #eee;
+// @barely-not-white: #f5f5f5;
+// @light-gray: #aaa;
+// @lightish-gray: #999;
+// @gray: #666;
+// @dark-gray: #333;
+// @deep-gray: #181818;
 @text: #333;
-@box-shadow-gray: rgba(0,0,0,0.26);
+// @box-shadow-gray: rgba(0,0,0,0.26);
 
 html {
     font-family: 'Lato', sans-serif;
     color: @text;
 }
+html {
+    background-color: #DDD5D0;
+}
+
+.container {
+    .wrapper {
+        background-color: #FFFFFF;
+        box-shadow: none;
+
+        .start-area {
+            margin-top: 6px;
+
+            .linkz {
+                margin-left: 4px;
+                cursor: pointer;
+
+                .mini {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// Body Text
+.body-lato {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #DDD5D0;
+}
+
+// Subtitles
+.subtitle-lato {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    color: #FFFFFF;
+}
+
+// Titles
+.title-lato {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.title {
+    color: #C41C1C;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #c41c1c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  height: 100%;
+  }
+
+  .btn:hover {background-color: #c41c1c; box-shadow: 0 9px #999;}
+
+  .btn:active {
+  background-color: #c41c1c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+  .btn:focus {
+  background-color: #c41c1c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  }
+
+// Links
+.link-lato {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #DDD5D0;
+}
+
+// Dark Background Links
+// .dark-link-lato {
+//     font-family: 'Lato', sans-serif;
+//     font-weight: 700;
+//     font-size: 12px;
+//     color: @blue;
+// }
 
 // All bold text
 .bold-text {
     font-weight: 600;
 }
 
-//For subtitles
-.gray-text, .grey-text {
-    color: @gray;
-}
+// // Should be rarely used
+// .purple-background {
+//     background-color: @purple;
+// }
 
-//For subtitles on dark backgrounds
-.light-gray-text {
-    color: @light-gray;
-}
+// // For all major dark themed color blocks
+// .dark-purple-background {
+//     background-color: @dark-purple;
+// }
 
-// Dark background text
-.dark-white-text {
-    color: @dark-white;
-}
+// For highlight color blocks
 
-.white-text {
-    color: @white;
-}
+// Custom Input Colors
 
-// This is because all text should be dark gray, not black
-.black-text {
-    color: @text !important;
-}
 
 //Scroll Divs
 .scroll-col {
     overflow: scroll;
 }
+
+.col {
+    .no-pads {
+        padding: 0;
+    }
+}
+.auth {
+    margin: 10px;
+}
+.auth-wrapper {
+    margin-top: 30%;
+    }

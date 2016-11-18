@@ -1,0 +1,98 @@
+@import 'base';
+
+html {
+    background-color: #DDD5D0;
+}
+
+.container {
+    .wrapper {
+        background-color: #FFFFFF;
+        box-shadow: none;
+
+        .start-area {
+            margin-top: 6px;
+
+            .linkz {
+                margin-left: 4px;
+                cursor: pointer;
+
+                .mini {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .input-area {
+            margin-top: 10px;
+
+            .left-input-field {
+                padding-left: 0;
+            }
+
+            @media (max-width: 600px) {
+                .input-field {
+                    padding-left: 0;
+                }
+
+                .input-field input, .input-field label {
+                    left: 0;
+                }
+            }
+
+            .input-field input, .input-field label {
+                color: #DDD5D0;
+            }
+
+            .left-input-field input, .left-input-field label {
+                left: 0;
+            }
+
+            .input-field input {
+                border-bottom: 1px solid #DDD5D0;
+                box-shadow: 0 1px 0 0 #DDD5D0;
+            }
+
+            .login-button {
+                margin-top: 20px;
+            }
+            .register-button {
+                margin-top: 20px;
+            }
+            .btn {
+              display: inline-block;
+              padding: 15px 25px;
+              font-size: 24px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              outline: none;
+              color: #fff;
+              background-color: #c41c1c;
+              border: none;
+              border-radius: 15px;
+              box-shadow: 0 9px #999;
+              height: 100%;
+              }
+
+              .btn:hover {background-color: #c41c1c}
+
+              .btn:active {
+              background-color: #c41c1c;
+              box-shadow: 0 5px #666;
+              transform: translateY(4px);
+              }
+              .btn:focus {
+              background-color: #c41c1c;
+              box-shadow: 0 5px #666;
+              transform: translateY(4px);
+              }
+              .title {
+                  color: #C41C1C;
+                  text-decoration: none;
+                  font-family: 'Lato', sans-serif;
+                  font-weight: 600;
+                  font-size: 30px;
+              }
+        }
+    }
+}

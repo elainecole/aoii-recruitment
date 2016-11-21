@@ -7,17 +7,18 @@ hk.HelloView = BB.View.extend({
 
     initialize: function (options) {
 
-        this.model = new hk.HelloUserModel();
+        this.model = new BB.Model({
+            user: user
+        });
         this.render();
 
-        this.listenTo(this.model, 'sync', this.renderUser)
+        // this.listenTo(this.model, 'sync', this.renderUser)
     },
 
     render: function () {
         this.$el.empty().append(this.template());
-    },
-
-    renderUser: function () {
+        console.log(this.$('.user-holder'));
         this.$('.user-holder').empty().append(this.userTemplate());
+
     }
 });

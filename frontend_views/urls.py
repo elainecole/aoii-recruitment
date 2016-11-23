@@ -3,5 +3,5 @@ import views as v
 
 urlpatterns = [
     url(r'^$', v.base_view, name='base'),
-    url(r'^outfit$', v.outfit_view, name='outfit')
+    url(r'^attire$', v.outfit_view, name='outfit')
 ]

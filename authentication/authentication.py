@@ -4,16 +4,16 @@ from django.contrib.auth import authenticate, logout, login
 from api.models import Account
 
 def hk_login(request):
-    username = request.POST.get('username', '')
+    # username = request.POST.get('username', '')
     password = request.POST.get('password', '')
 
-    user = authenticate(username=username, password=password)
+    user = authenticate(username="aoii", password=password)
     if user is not None:
         login(request, user)
 
         return HttpResponse()
     else:
-        return HttpResponseBadRequest(reason='Invalid username or password')
+        return HttpResponseBadRequest(reason='Invalid password')
 
 
 def hk_logout(request):

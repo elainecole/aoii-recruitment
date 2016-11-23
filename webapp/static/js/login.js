@@ -24,19 +24,24 @@ hk.LoginView = BB.View.extend({
         'click .login-button': 'login',
         'click .register-link': 'swapToRegister',
         'click .login-link': 'swapToLogin',
-        'click .register-button': 'register'
+        'click .register-button': 'register',
+        'keyup #password': function (e){
+            if (e.which===13) {
+                this.login();
+            }
+        }
     },
 
     login: function () {
-        var username = this.$el.find('#username').val(),
-            password = this.$el.find('#password').val();
+        // var username = this.$el.find('#username').val(),
+        var password = this.$el.find('#password').val();
 
-        if (username && password) {
+        if (password) {
             $.ajax({
                 type: 'POST',
                 url: 'auth/login',
                 data: {
-                    username: username,
+                    // username: username,
                     password: password
                 },
                 success: function () {
@@ -53,7 +58,7 @@ hk.LoginView = BB.View.extend({
                 }
             });
         } else {
-            Materialize.toast('<span class="subtitle-lato white-text">Please input your username and password</span>', 2000);
+            Materialize.toast('<span class="subtitle-lato white-text">Please input your password</span>', 2000);
         }
     },
 
@@ -97,7 +102,7 @@ hk.LoginView = BB.View.extend({
             });
 
         } else {
-            Materialize.toast('<span class="subtitle-lato white-text">Please fill all the fields</span>', 3000);
+            Materialize.toast('<span class="subtitle-lato white-text">Please fill the password field</span>', 3000);
         }
     }
 });

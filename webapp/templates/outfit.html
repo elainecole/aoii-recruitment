@@ -1,0 +1,26 @@
+<!doctype html>
+
+<head>
+    {% load staticfiles %}
+    {% include "base/links.html" %}
+    {% include "base/less_headers/hello_less.html" %}
+</head>
+
+<script id="outfit-template" type="text/template">
+    {% include "partials/outfit/outfit_base.html" %}
+</script>
+
+<body>
+    <div id="outfit">
+
+    </div>
+</body>
+
+<script type="text/javascript" src="{% static "js/outfit.js" %}"></script>
+<script type="text/javascript">
+    var user = {{user|safe}};
+
+    var outfitView = new hk.OutfitView();
+</script>
+
+</html>

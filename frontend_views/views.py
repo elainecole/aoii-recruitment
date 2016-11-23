@@ -10,3 +10,10 @@ def base_view(request):
     account = Account.objects.get(user_id=request.user.id)
 
     return TemplateResponse(request, 'hello.html', {'user': json.dumps(account.id)})
+
+def outfit_view(request):
+    if not request.user.is_authenticated():
+        return TemplateResponse(request, 'login.html', {})
+    account = Account.objects.get(user_id=request.user.id)
+
+    return TemplateResponse(request, 'outfit.html', {'user': json.dumps(account.id)})
